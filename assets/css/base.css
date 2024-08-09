@@ -21,6 +21,7 @@ html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+/* responsive*/
 .grid {
   width: 1200px;
   max-width: 100%;
@@ -32,6 +33,7 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
 }
 /*button style*/
 .btn {
@@ -62,4 +64,15 @@ html {
   cursor: default;
   background-color: #c3c3c3;
   color: #949494;
+}
+/*test*/
+.grid__column-2 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 16.6667%;
+}
+.grid__column-10 {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 83.3334%;
 }
