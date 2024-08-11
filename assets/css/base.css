@@ -47,7 +47,7 @@ html {
   outline: none;
   cursor: pointer;
   color: var(--text-color);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   line-height: 1.6rem;
@@ -88,6 +88,7 @@ html {
   color: var(--text-color);
   font-size: 1.6rem;
   padding: 8px 16px;
+  margin-top: 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 .category__heading-icon {
@@ -129,3 +130,4 @@ html {
   color: var(--primary-color);
   right: -4px;
 }
+/*Home sort + filter*/

@@ -149,6 +149,7 @@
   border-radius: 2px;
   display: none;
   animation: fadein ease-in 0.3s;
+  z-index: 1;
 }
 
 .header__qr-img {
@@ -693,6 +694,9 @@
   border: 2px solid #ee4d2d;
   top: -4px;
   right: -4px;
+}
+.app__content {
+  padding-top: 24px;
 }
 /*cart*/
 .header__cart-heading {
