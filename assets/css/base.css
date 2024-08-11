@@ -131,3 +131,44 @@ html {
   right: -4px;
 }
 /*Home sort + filter*/
+.select-input {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  min-width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+  position: relative;
+}
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  list-style: none;
+  padding: 10px 16px;
+  display: none;
+}
+.select-input__link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 5px 0;
+  display: block;
+}
+.select-input__link:hover {
+  color: var(--primary-color);
+}
+.select-input__label {
+  font-size: 1.4rem;
+}
+.select-input__icon {
+}
+.select-input:hover .select-input__list {
+  display: block;
+}
