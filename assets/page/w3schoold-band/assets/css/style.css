@@ -15,12 +15,17 @@ html {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 #slider {
   margin-top: 46px;
+  padding-top: 50%;
+  position: relative;
+  background: url("../img/slider/chicago.jpg") top center / cover no-repeat;
 }
 #content {
+  height: 1000px;
 }
 #footer {
 }
@@ -90,4 +95,71 @@ html {
 }
 #header .search-btn:hover {
   background-color: #f44336;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  color: #fff;
+  /* left: 0;
+  right: 0; */
+  width: 100%;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
+}
+#slider .text-heading {
+  font-weight: 300;
+  font-size: 15px;
+}
+#slider .text-description {
+}
+
+#content .content-section {
+  width: 800px;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.6;
+}
+#content .about-text {
+  font-size: 15px;
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 1.4rem;
+}
+#content .member-list {
+  display: flex;
+  margin-top: 48px;
+  text-align: center;
+  /* justify-content: space-around; */
+}
+#content .member-item {
+  float: left;
+  width: calc(100% / 3);
+}
+#content .member-name {
+  text-align: center;
+  font-size: 15px;
+}
+#content .member-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 5px;
+}
+.clear {
+  clear: both;
 }
