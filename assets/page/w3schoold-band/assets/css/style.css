@@ -19,6 +19,9 @@ html {
 }
 #footer {
 }
+#nav {
+  display: inline-block;
+}
 .subnav li {
   display: block;
 }
@@ -60,7 +63,26 @@ html {
 #nav .subnav {
   display: none;
   min-width: 160px;
+  top: 100%;
+  left: 0;
   position: absolute;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+#header .search-btn {
+  float: right;
+  padding: 0 21px;
+  cursor: pointer;
+}
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+  /* background-color: #ccc; */
+}
+#header .search-btn:hover {
+  background-color: #f44336;
 }
