@@ -25,7 +25,7 @@ html {
   background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
 }
 #content {
-  height: 1000px;
+  /* height: 1000px; */
 }
 #footer {
   padding: 64px 16px;
