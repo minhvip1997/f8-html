@@ -28,6 +28,8 @@ html {
   height: 1000px;
 }
 #footer {
+  padding: 64px 16px;
+  text-align: center;
 }
 #nav {
   display: inline-block;
@@ -119,7 +121,7 @@ html {
   /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
+  padding: 64px 0 112px;
 }
 
 #content .section-heading {
@@ -226,7 +228,6 @@ html {
 
 .place-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 .place-item {
   width: 33.33333%;
@@ -391,4 +392,44 @@ html {
 .form-submit-btn:hover {
   cursor: pointer;
   background-color: #ccc;
+}
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 24px;
+}
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 24px;
+  cursor: pointer;
+}
+.pull-right {
+  float: right !important;
+}
+.map-section img {
+  width: 100%;
+}
+#footer .social-list {
+  font-size: 24px;
+}
+#footer .social-list a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+#footer .social-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+#footer .social-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+#footer .copy-write {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.3);
 }
