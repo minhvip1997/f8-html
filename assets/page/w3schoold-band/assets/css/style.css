@@ -384,6 +384,13 @@ html {
   font-size: 18px;
   line-height: 1.4rem;
 }
+.contact-info a {
+  color: #101aef;
+}
+.contact-info a:hover {
+  color: #101aef;
+  opacity: 0.8;
+}
 .contact-info i[class*="ti-"] {
   width: 30px;
   display: inline-block;
