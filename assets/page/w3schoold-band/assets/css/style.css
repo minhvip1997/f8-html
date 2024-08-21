@@ -133,6 +133,9 @@ html {
   font-size: 15px;
 }
 #slider .text-description {
+  font-size: 15px;
+  margin-top: 15px;
+  text-shadow: 0 0 1px #000;
 }
 
 #content .content-section {
