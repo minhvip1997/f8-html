@@ -316,6 +316,7 @@ html {
   min-height: 200px;
   max-width: calc(100%-32px);
   position: relative;
+  animation: modalFadeIn ease 0.5s;
 }
 .modal .modal-header {
   /* display: flex; */
@@ -377,7 +378,7 @@ html {
 .modal-footer a {
   color: #2196f3;
 }
-.modal.open {
+.open {
   display: flex;
 }
 .contact-content {
@@ -468,4 +469,16 @@ html {
 }
 .mt-32 {
   margin-top: 32px;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

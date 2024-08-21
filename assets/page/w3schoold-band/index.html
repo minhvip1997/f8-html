@@ -124,7 +124,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="s-col-full col col-third mt-16">
@@ -139,7 +141,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="s-col-full col col-third mt-16">
@@ -154,7 +158,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="btn s-full-width">Buy Tickets</a>
+                  <button class="btn s-full-width js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -234,9 +240,9 @@
         <p class="copy-write">Powered by <a href="">w3.css</a></p>
       </div>
     </div>
-    <div class="modal">
-      <div class="modal-cotainer">
-        <div class="modal-close">
+    <div class="modal js-modal">
+      <div class="modal-cotainer js-modal-container">
+        <div class="modal-close js-modal-close">
           <i class="ti-close"></i>
         </div>
         <header class="modal-header">
@@ -302,5 +308,84 @@
         }
       };
     }
+  </script>
+  <script>
+    const buyBtns = document.querySelectorAll(".js-buy-ticket");
+    const modal = document.querySelector(".modal");
+    const modalClose = document.querySelector(".modal-close");
+    const modalContainer = document.querySelector(".js-modal-container");
+    function showBuyTicket() {
+      modal.classList.add("open");
+    }
+    function closeBuyTicket() {
+      modal.classList.remove("open");
+    }
+
+    for (const buyBtn of buyBtns) {
+      buyBtn.addEventListener("click", showBuyTicket);
+    }
+    modal.addEventListener("click", closeBuyTicket);
+    modalClose.addEventListener("click", closeBuyTicket);
+    modalContainer.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>
+
+  <script>
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const input3 = document.getElementById("input3");
+    const MAX_VALUE = 99999;
+    const MIN_VALUE = 0;
+    input1.addEventListener("keydown", function (event) {
+      if (event.key === "Tab") {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của phím Tab
+        input2.focus(); // Chuyển con trỏ đến ô input2
+      }
+    });
+    // Giới hạn input1 chỉ cho phép số nguyên
+    input1.addEventListener("input", function (event) {
+      // Loại bỏ bất kỳ ký tự nào không phải là số
+      this.value = this.value.replace(/[^\d]/g, "");
+
+      let value = parseInt(this.value, 10);
+      if (isNaN(value)) value = MIN_VALUE; // Nếu giá trị không hợp lệ, đặt về 0
+      if (value > MAX_VALUE) value = MAX_VALUE;
+      if (value < MIN_VALUE) value = MIN_VALUE;
+      this.value = value;
+    });
+    input3.addEventListener("click", function (event) {
+      const a = input1.value;
+      // console.log("aaaaaaaaaaaaaaaaa", a);
+    });
+
+    // Giới hạn input2 cho phép số thập phân với cả dấu chấm và dấu phẩy
+    input2.addEventListener("input", function (event) {
+      // Chỉ cho phép số thập phân, với dấu chấm hoặc dấu phẩy là dấu phân cách thập phân
+      this.value = this.value.replace(/[^0-9.,]/g, "");
+
+      // Nếu có nhiều hơn một dấu chấm hoặc dấu phẩy thì chỉ giữ lại dấu đầu tiên
+      const parts = this.value.split(/[.,]/);
+      if (parts.length > 2) {
+        this.value = `${parts[0]},${parts.slice(1).join("")}`;
+      }
+
+      // Chuyển giá trị sang số thập phân và kiểm tra giới hạn
+      let value = this.value.replace(",", ".");
+      if (value === "" || value.endsWith(".")) {
+        return; // Không làm gì nếu ô nhập liệu rỗng hoặc người dùng mới nhập dấu phẩy
+      }
+      value = parseFloat(value);
+      if (isNaN(value)) value = MIN_VALUE; // Nếu giá trị không hợp lệ, đặt về 0
+      if (value > MAX_VALUE) value = MAX_VALUE;
+      if (value < MIN_VALUE) value = MIN_VALUE;
+
+      // Nếu người dùng nhập dấu phẩy, giữ nguyên dấu phẩy, nếu nhập dấu chấm thì giữ dấu chấm
+      if (this.value.includes(",")) {
+        this.value = value.toString().replace(".", ",");
+      } else {
+        this.value = value;
+      }
+    });
   </script>
 </html>
