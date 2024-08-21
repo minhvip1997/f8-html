@@ -32,12 +32,22 @@
   }
 
   .s-col-full {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 100%;
   }
   #content .member-img {
     width: 100%;
     margin-top: 16px;
+  }
+  .contact-form {
+    margin-top: 16px;
+  }
+  .s-mt-8 {
+    margin-top: 8px;
+  }
+
+  .s-full-width {
+    width: 100%;
   }
 }
 /* tablet */
